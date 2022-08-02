@@ -1,12 +1,10 @@
 import './index.css';
-import { Display } from './modules/display';
-import { addLikes} from './modules/service.js'
-//import { getAllMovies } from './modules/service';
+// eslint-disable-next-line
+import { Display } from './modules/display.js';
+import { addLikes } from './modules/service.js';
 
-Display();
-//const shows =  await getAllMovies();
+await Display();
 const btnLikes = document.querySelectorAll('#btnLikes');
-
 btnLikes.forEach((button) => {
   button.addEventListener('click', (event) => {
     event.preventDefault();

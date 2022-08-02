@@ -8,8 +8,9 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-  }, experiments: {
-    topLevelAwait: true
+  },
+  experiments: {
+    topLevelAwait: true,
   },
   module: {
     rules: [
@@ -70,5 +71,5 @@ module.exports = {
       jquery: 'jQuery',
     }),
     new MiniCssExtractPlugin(),
-  ]
+  ],
 };

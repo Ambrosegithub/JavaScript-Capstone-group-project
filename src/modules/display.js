@@ -1,9 +1,21 @@
-import { getAllMovies, getAllLikes } from "./service.js"
+// eslint-disable-next-line
+import { getAllMovies, getAllLikes } from './service.js';
 
 export const Display = async () => {
   const shows = await getAllMovies();
+  const likes = await getAllLikes();
 
-  let htmlshow = "";
+  const showLikes = (showId) => {
+    let totalLikes = '';
+
+    const like = likes.filter((l) => l.item_id === showId);
+    if (like[0]) {
+      totalLikes = like[0].likes.toString();
+    }
+    return totalLikes;
+  };
+
+  let htmlshow = '';
 
   shows.forEach((show) => {
     htmlshow += `
@@ -12,17 +24,17 @@ export const Display = async () => {
         <div class="details">
             <h2>${show.show.name} 
               <button class="btn" id="btnLikes"><i class="bi bi-heart" data-showId="${
-                show.show.id
-              }"></i></button></h2>
+  show.show.id
+}"></i></button></h2>
               <p id="likeId" >Likes "${showLikes(show.show.id)}"</p>
         </div>
         <div class="button-modal">
           <button type="button" class="button" id="modal-comments" data-showId="${
-            show.show.id
-          }">Comments</button>
+  show.show.id
+}">Comments</button>
           <button type="button" class="button" id="reservations" data-showId="${
-            show.show.id
-          }">Reservations</button>
+  show.show.id
+}">Reservations</button>
         </div>
         </div>
            <div class="modal">
@@ -51,20 +63,6 @@ export const Display = async () => {
 `;
   });
 
-  const cardshows = document.querySelector(".shows");
+  const cardshows = document.querySelector('.shows');
   cardshows.innerHTML = htmlshow;
-};
-
-
-const likes = await getAllLikes();
-
-const showLikes = (showId) => {
-  let totalLikes = "";
-
-  const like = likes.filter((l) => l.item_id === showId);
-
-  if (like[0]) {
-    totalLikes = like[0].likes.toString();
-  }
-  return totalLikes;
 };
