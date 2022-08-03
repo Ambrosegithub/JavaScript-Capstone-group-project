@@ -39,7 +39,7 @@ export const Display = async () => {
                   <h2>Comments</h2>
                 </div>
                 <div class="form-comments">
-                  <form id="formCommentId" class="formComment" data-showId="${show.show.id}">
+                  <form id="formCommentId" class="formComment">
                   <h2>Add a comment</h2>
                     <input type="text" id="name" name="name">
                     <textarea id="comment" name="comment" rows="4" cols="30"></textarea>

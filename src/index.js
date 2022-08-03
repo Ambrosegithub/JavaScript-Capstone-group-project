@@ -14,7 +14,8 @@ const image = document.getElementById('img-detail');
 const btnModalComments = document.querySelectorAll('#modal-comments');
 const total = document.querySelectorAll('.likeId');
 const btnLikes = document.querySelectorAll('#btnLikes');
-const formComments = document.getElementsByClassName('formComment');
+const formComments = document.querySelectorAll('.formComment');
+let formId = 0;
 
 // START LIKES SECTION
 
@@ -60,6 +61,7 @@ btnModalComments.forEach((Modalcomment) => {
     event.preventDefault();
     const id = parseInt(event.target.getAttribute('data-showid'), 10);
     toggleModal(id);
+    formId = id;
   });
 });
 
@@ -69,28 +71,17 @@ closeButton.addEventListener('click', toggleModal);
 //ADD COMMENT
 
 
-/*formComments.forEach((formComment) => {
+formComments.forEach((formComment) => {
   formComment.addEventListener('submit', (event) => {
     event.preventDefault();
-const id = parseInt(event.target.getAttribute('data-showid'), 10);
+    console.log(formId)
     const formData = new FormData(event.target);
-    console.log(id);
     const userName = formData.get('name');
     const userComment = formData.get('comment');
-    const comment = new Comment(id, userName, userComment);
+    const comment = new Comment(formId, userName, userComment);
     addComment(comment);
-    formComment.reset();
-    
+    formComment.reset();   
   });
-}); */
+}); 
 
 // END COMMENT MODAL SECTION
-formComments.addEventListener('submit', (event)=> {
-event.preventDefault()
-event.forEach((formComment) => {
-  const id = parseInt(event.target.getAttribute('data-showid'), 10);
-  //const formData = new FormData(event.target);
-  console.log(id);
-formComment.reset()
-})
-})
