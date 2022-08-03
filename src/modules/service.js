@@ -1,5 +1,6 @@
 const showsBaseUrl = 'https://api.tvmaze.com/search/shows?q=girls';
 const likesBaseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dJUZAxNGSAzuOwOz1Flo/likes/';
+const commentsBaseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dJUZAxNGSAzuOwOz1Flo/comments/';
 
 export const getAllMovies = async () => {
   const response = (await fetch(showsBaseUrl)).json();
@@ -16,6 +17,25 @@ export const addLikes = async (id) => {
     method: 'POST',
     body: JSON.stringify({
       item_id: id,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+};
+
+export const getAllComments = async () => {
+  const response = (await fetch(commentsBaseUrl)).json();
+  return response;
+};
+
+export const addComment = async (comment) => {
+  await fetch(commentsBaseUrl, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: comment.id,
+      username: comment.userName,
+      comment: comment.userComment,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
