@@ -4,7 +4,7 @@ import { Display } from './modules/display.js';
 import {
   addLikes, getAllLikes, getAllMovies, addComment,
 } from './modules/service.js';
-import Comment from './modules/comment';
+import Comment from './modules/comment.js';
 
 await Display();
 
@@ -75,7 +75,6 @@ closeButton.addEventListener('click', toggleModal);
 formComments.forEach((formComment) => {
   formComment.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log(formId);
     const formData = new FormData(event.target);
     const userName = formData.get('name');
     const userComment = formData.get('comment');

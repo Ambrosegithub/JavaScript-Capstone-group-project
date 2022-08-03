@@ -6,7 +6,7 @@ export const Display = async () => {
   const moviesCounter = document.querySelector('#movies-counter');
   let htmlshow = '';
 
-  moviesCounter.innerHTML=shows.length;
+  moviesCounter.innerHTML = shows.length;
 
   shows.forEach((show) => {
     htmlshow += `
