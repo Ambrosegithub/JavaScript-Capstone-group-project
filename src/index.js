@@ -17,6 +17,7 @@ const btnModalComments = document.querySelectorAll('#modal-comments');
 const total = document.querySelectorAll('.likeId');
 const btnLikes = document.querySelectorAll('#btnLikes');
 const formComments = document.querySelectorAll('.formComment');
+
 let formId = 0;
 
 // START LIKES SECTION
