@@ -1,20 +1,8 @@
-// eslint-disable-next-line
-import { getAllMovies, getAllLikes } from './service.js';
+/* eslint-disable import/prefer-default-export */
+import { getAllMovies } from './service.js';
 
 export const Display = async () => {
   const shows = await getAllMovies();
-  const likes = await getAllLikes();
-
-  const showLikes = (showId) => {
-    let totalLikes = '';
-
-    const like = likes.filter((l) => l.item_id === showId);
-    if (like[0]) {
-      totalLikes = like[0].likes.toString();
-    }
-    return totalLikes;
-  };
-
   let htmlshow = '';
 
   shows.forEach((show) => {
@@ -26,7 +14,7 @@ export const Display = async () => {
               <button class="btn" id="btnLikes"><i class="bi bi-heart" data-showId="${
   show.show.id
 }"></i></button></h2>
-              <p id="likeId" >Likes "${showLikes(show.show.id)}"</p>
+              <p class="likeId" >Likes</p>
         </div>
         <div class="button-modal">
           <button type="button" class="button" id="modal-comments" data-showId="${
