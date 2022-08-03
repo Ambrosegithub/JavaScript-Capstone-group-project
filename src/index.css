@@ -1,2 +1,41 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+.button-modal {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.modal-box img {
+  width: fit-content;
+  border-radius: 8px;
+  max-height: 100vh;
+}
+
+.close-button {
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.modal {
+  margin-top: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  backdrop-filter: blur(8px);
+  max-width: 100vw;
+}
