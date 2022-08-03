@@ -1,7 +1,8 @@
 import './index.css';
 /* eslint-disable import/prefer-default-export */
 import { Display } from './modules/display.js';
-import { addLikes, getAllLikes, getAllMovies } from './modules/service.js';
+import { addLikes, getAllLikes, getAllMovies, addComment } from './modules/service.js';
+import Comment from './modules/comment'
 
 await Display();
 
@@ -13,6 +14,7 @@ const image = document.getElementById('img-detail');
 const btnModalComments = document.querySelectorAll('#modal-comments');
 const total = document.querySelectorAll('.likeId');
 const btnLikes = document.querySelectorAll('#btnLikes');
+const formComments = document.getElementsByClassName('formComment');
 
 // START LIKES SECTION
 
@@ -62,4 +64,33 @@ btnModalComments.forEach((Modalcomment) => {
 });
 
 closeButton.addEventListener('click', toggleModal);
+
+
+//ADD COMMENT
+
+
+/*formComments.forEach((formComment) => {
+  formComment.addEventListener('submit', (event) => {
+    event.preventDefault();
+const id = parseInt(event.target.getAttribute('data-showid'), 10);
+    const formData = new FormData(event.target);
+    console.log(id);
+    const userName = formData.get('name');
+    const userComment = formData.get('comment');
+    const comment = new Comment(id, userName, userComment);
+    addComment(comment);
+    formComment.reset();
+    
+  });
+}); */
+
 // END COMMENT MODAL SECTION
+formComments.addEventListener('submit', (event)=> {
+event.preventDefault()
+event.forEach((formComment) => {
+  const id = parseInt(event.target.getAttribute('data-showid'), 10);
+  //const formData = new FormData(event.target);
+  console.log(id);
+formComment.reset()
+})
+})
