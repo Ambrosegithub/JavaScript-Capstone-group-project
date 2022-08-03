@@ -1,8 +1,10 @@
 import './index.css';
 /* eslint-disable import/prefer-default-export */
 import { Display } from './modules/display.js';
-import { addLikes, getAllLikes, getAllMovies, addComment } from './modules/service.js';
-import Comment from './modules/comment'
+import {
+  addLikes, getAllLikes, getAllMovies, addComment,
+} from './modules/service.js';
+import Comment from './modules/comment';
 
 await Display();
 
@@ -67,21 +69,19 @@ btnModalComments.forEach((Modalcomment) => {
 
 closeButton.addEventListener('click', toggleModal);
 
-
-//ADD COMMENT
-
+// ADD COMMENT
 
 formComments.forEach((formComment) => {
   formComment.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log(formId)
+    console.log(formId);
     const formData = new FormData(event.target);
     const userName = formData.get('name');
     const userComment = formData.get('comment');
     const comment = new Comment(formId, userName, userComment);
     addComment(comment);
-    formComment.reset();   
+    formComment.reset();
   });
-}); 
+});
 
 // END COMMENT MODAL SECTION
