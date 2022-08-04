@@ -54,4 +54,3 @@ export const Display = async () => {
   const cardshows = document.querySelector('.shows');
   cardshows.innerHTML = htmlshow;
 };
-
