@@ -37,9 +37,9 @@ export const Display = async () => {
                   <img id="img-detail" alt="show Images">
                 </div>
                 <div class="comment-detais">
-                  <p> Fuel: titanium   Lenght:100</p>
-                  <p> Weight: titanium   Power:100</p>
-                  <h2>Comments</h2>
+                  <p><span id="itemDetails"></span></p>
+                  <h2><span id="totalComments"></span></h2>
+                  <span id="showComments"></span>
                 </div>
                 <div class="form-comments">
                   <form id="formCommentId" class="formComment">
