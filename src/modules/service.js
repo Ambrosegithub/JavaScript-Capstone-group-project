@@ -6,12 +6,7 @@ export const getAllMovies = async () => {
   const response = (await fetch(showsBaseUrl)).json();
   return response;
 };
-/*
-export const numberOfMovies = async () =>{
-  const movies = await getAllMovies();
-  return movies ? movies.length: 0;
-}
-*/
+
 export const getAllLikes = async () => {
   const response = (await fetch(likesBaseUrl)).json();
   return response;
