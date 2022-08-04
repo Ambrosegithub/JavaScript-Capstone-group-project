@@ -2,7 +2,6 @@
 import { getAllMovies } from './service.js';
 
 export const Display = async () => {
-
   const shows = await getAllMovies();
   const moviesCounter = document.querySelector('#movies-counter');
   moviesCounter.innerHTML = shows.length;
@@ -57,4 +56,4 @@ export const Display = async () => {
   const cardshows = document.querySelector('.shows');
   cardshows.innerHTML = htmlshow;
 };
- //export default  getAllMovies;
+// export default  getAllMovies;
