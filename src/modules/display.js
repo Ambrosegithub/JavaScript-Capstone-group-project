@@ -3,7 +3,10 @@ import { getAllMovies } from './service.js';
 
 export const Display = async () => {
   const shows = await getAllMovies();
+  const moviesCounter = document.querySelector('#movies-counter');
   let htmlshow = '';
+
+  moviesCounter.innerHTML = shows.length;
 
   shows.forEach((show) => {
     htmlshow += `

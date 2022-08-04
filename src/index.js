@@ -4,7 +4,7 @@ import { Display } from './modules/display.js';
 import {
   addLikes, getAllLikes, getAllMovies, addComment, getAllCommentsByItemId,
 } from './modules/service.js';
-import Comment from './modules/comment';
+import Comment from './modules/comment.js';
 
 await Display();
 
