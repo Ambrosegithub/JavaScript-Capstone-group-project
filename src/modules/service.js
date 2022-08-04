@@ -1,6 +1,6 @@
 const showsBaseUrl = 'https://api.tvmaze.com/search/shows?q=girls';
-const likesBaseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dJUZAxNGSAzuOwOz1Flo/likes/';
-const commentsBaseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dJUZAxNGSAzuOwOz1Flo/comments';
+const likesBaseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mAdM57hR4etqPKaNuiYY/likes/';
+const commentsBaseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mAdM57hR4etqPKaNuiYY/comments/';
 
 export const getAllMovies = async () => {
   const response = (await fetch(showsBaseUrl)).json();
