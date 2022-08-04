@@ -47,7 +47,6 @@ btnLikes.forEach((button) => {
         el.innerHTML = `<br><br><span class="likes_count">Likes(${totalLikes})`;
       });
     });
-
   });
 });
 
@@ -74,7 +73,7 @@ export const totalComments = async (itemId) => {
 const showItemComments = (itemId) => {
   totalComments(itemId).then((total) => {
     showComments.innerHTML = '';
-    if(total){
+    if (total) {
       total.forEach((comment) => {
         const comentDetails = `${comment.creation_date}  ${comment.username}:  ${comment.comment}<br>`;
         showComments.innerHTML += comentDetails;
