@@ -36,7 +36,7 @@ export const Display = async () => {
                 <div class="comment-detais">
                   <p> Fuel: titanium   Lenght:100</p>
                   <p> Weight: titanium   Power:100</p>
-                  <h2>Comments</h2>
+                  <h2><span id="totalComments"></span></h2>
                 </div>
                 <div class="form-comments">
                   <form id="formCommentId" class="formComment">
@@ -54,3 +54,4 @@ export const Display = async () => {
   const cardshows = document.querySelector('.shows');
   cardshows.innerHTML = htmlshow;
 };
+

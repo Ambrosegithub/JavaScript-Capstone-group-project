@@ -2,7 +2,7 @@ import './index.css';
 /* eslint-disable import/prefer-default-export */
 import { Display } from './modules/display.js';
 import {
-  addLikes, getAllLikes, getAllMovies, addComment,
+  addLikes, getAllLikes, getAllMovies, addComment, getAllCommentsByItemId,
 } from './modules/service.js';
 import Comment from './modules/comment';
 
@@ -17,6 +17,8 @@ const btnModalComments = document.querySelectorAll('#modal-comments');
 const total = document.querySelectorAll('.likeId');
 const btnLikes = document.querySelectorAll('#btnLikes');
 const formComments = document.querySelectorAll('.formComment');
+const totalAddedComments = document.querySelector('#totalComments');
+
 let formId = 0;
 
 // START LIKES SECTION
@@ -63,6 +65,7 @@ btnModalComments.forEach((Modalcomment) => {
     event.preventDefault();
     const id = parseInt(event.target.getAttribute('data-showid'), 10);
     toggleModal(id);
+    getllAllComments(id);
     formId = id;
   });
 });
@@ -74,14 +77,31 @@ closeButton.addEventListener('click', toggleModal);
 formComments.forEach((formComment) => {
   formComment.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log(formId);
     const formData = new FormData(event.target);
     const userName = formData.get('name');
     const userComment = formData.get('comment');
     const comment = new Comment(formId, userName, userComment);
     addComment(comment);
+    getllAllComments(formId);
     formComment.reset();
   });
 });
+
+export const totalComments = async (item_id) => {
+  let totalComments = await getAllCommentsByItemId (item_id);
+  return totalComments;
+};
+
+export const getllAllComments = (item_id) => {
+
+  totalComments(item_id).then((totalComments) => {
+
+    if(totalComments.length){
+      totalAddedComments.innerHTML = `Comments(${totalComments.length})`;
+    } else {
+      totalAddedComments.innerHTML = `Comments(${("")})`;
+    }
+  });
+}
 
 // END COMMENT MODAL SECTION
