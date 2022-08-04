@@ -1,3 +1,3 @@
-const comments = commentsList => commentsList.length;
+const comments = (commentsList) => commentsList.length;
 
 export default comments;

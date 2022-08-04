@@ -3,7 +3,7 @@
 /* eslint-disable camelcase */
 import api_mock from '../__mock__/api_mock.json';
 import movies from '../__mock__/countMovies';
-import comments from '../__mock__/countComments'
+import comments from '../__mock__/countComments';
 
 const movieComments = [
   {
@@ -28,5 +28,4 @@ describe("Test Number of movies and comments", () => {
   test("Test Number of comments", () => {
     expect(comments(movieComments)).toBe(3);
   });
-
 });
