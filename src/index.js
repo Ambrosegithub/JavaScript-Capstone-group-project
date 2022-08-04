@@ -9,7 +9,6 @@ import Comment from './modules/comment';
 await Display();
 
 const shows = await getAllMovies();
-const likes = await getAllLikes();
 const modal = document.querySelector('.modal');
 const closeButton = document.querySelector('.close-button');
 const image = document.getElementById('img-detail');
@@ -20,15 +19,17 @@ const formComments = document.querySelectorAll('.formComment');
 const totalAddedComments = document.querySelector('#totalComments');
 const showComments = document.querySelector('#showComments');
 const itemDetails = document.querySelector('#itemDetails');
-
 let formId = 0;
 
 // START LIKES SECTION
 
 export const showLikes = async (showId) => {
   let totalLikes = '';
+  let like = [];
+  const likes = await getAllLikes();
 
-  const like = likes.filter((l) => l.itemId === showId);
+  like = likes.filter((l) => l.item_id === showId);
+
   if (like[0]) {
     totalLikes = like[0].likes;
   }
@@ -40,6 +41,7 @@ btnLikes.forEach((button) => {
     event.preventDefault();
     const id = parseInt(event.target.getAttribute('data-showid'), 10);
     addLikes(id);
+
     total.forEach((el) => {
       showLikes(id).then((totalLikes) => {
         el.innerHTML = `<br><br><span class="likes_count">Likes(${totalLikes})`;
@@ -71,10 +73,12 @@ export const totalComments = async (itemId) => {
 const showItemComments = (itemId) => {
   totalComments(itemId).then((total) => {
     showComments.innerHTML = '';
-    total.forEach((comment) => {
-      const comentDetails = `${comment.creation_date}  ${comment.username}:  ${comment.comment}<br>`;
-      showComments.innerHTML += comentDetails;
-    });
+    if (total) {
+      total.forEach((comment) => {
+        const comentDetails = `${comment.creation_date}  ${comment.username}:  ${comment.comment}<br>`;
+        showComments.innerHTML += comentDetails;
+      });
+    }
   });
 };
 export const getllAllComments = (itemId) => {
