@@ -18,6 +18,8 @@ const total = document.querySelectorAll('.likeId');
 const btnLikes = document.querySelectorAll('#btnLikes');
 const formComments = document.querySelectorAll('.formComment');
 const totalAddedComments = document.querySelector('#totalComments');
+const showComments = document.querySelector('#showComments');
+const itemDetails = document.querySelector('#itemDetails');
 
 let formId = 0;
 
@@ -67,6 +69,20 @@ btnModalComments.forEach((Modalcomment) => {
     toggleModal(id);
     getllAllComments(id);
     formId = id;
+
+    shows.forEach((item)=> {
+      if(item.show.id === id){
+        console.log(item)
+        itemDetails.innerHTML = "";
+        let details = ` Lang:${item.show.language}. &nbsp; Genres:  ${item.show.genres}<br><br> weight: ${item.show.weight}.  Type of movie: ${item.show.type}`
+        itemDetails.innerHTML += details;
+      }
+    })
+
+
+
+
+
   });
 });
 
@@ -83,6 +99,7 @@ formComments.forEach((formComment) => {
     const comment = new Comment(formId, userName, userComment);
     addComment(comment);
     getllAllComments(formId);
+    showItemComments(formId);
     formComment.reset();
   });
 });
@@ -98,10 +115,27 @@ export const getllAllComments = (item_id) => {
 
     if(totalComments.length){
       totalAddedComments.innerHTML = `Comments(${totalComments.length})`;
+      showItemComments(item_id);
     } else {
       totalAddedComments.innerHTML = `Comments(${("")})`;
     }
+
+        
   });
 }
+
+const showItemComments = (item_id) => {
+
+  totalComments(item_id).then((total) => {
+    showComments.innerHTML = "";
+    total.forEach((comment)=> {
+      let comentDetails = `${comment.creation_date}  ${comment.username}:  ${comment.comment}<br>`
+      showComments.innerHTML += comentDetails;
+    })
+        
+  })
+}
+
+
 
 // END COMMENT MODAL SECTION
