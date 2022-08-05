@@ -1,6 +1,3 @@
-
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Project Name :  # JavaScript-Capstone-group-project 
 
 > In this project we are making a Cinema TV webapp using an external API's
@@ -63,19 +60,20 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@githubhandle](https://github.com/Ambrosegithub
 )
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+- Twitter: [@twitterhandle](https://twitter.com/Glorious851)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ambrisexyz-chief-657000199/)
 
-![Ambrose Isigba's GitHub stats]())
 
 👤 **Custodio Serafim Langa**
 
 - GitHub: [@githubhandle](https://github.com/looh16
 )
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+- Twitter: [@twitterhandle](@looh16](https://twitter.com/custodiolanga1)
+)
+- LinkedIn: [LinkedIn]((https://www.linkedin.com/in/custodio-serafim-2a318a23a)
+)
 
-![Custodio Serafim Langa's GitHub stats]()
+
 
 
 ## 🤝 Contributing
