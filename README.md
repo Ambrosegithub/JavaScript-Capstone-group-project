@@ -1,24 +1,21 @@
-# Project Name :  # JavaScript-Capstone-group-project 
+# Project Name: 
+JavaScript-Capstone-group-project 
 
 > In this project we are making a Cinema TV webapp using an external API's
 >
 >
 > In order to achieve this project I used some resources and technologies listed below :
 
-## Here are the screen shoot of the project
-
 
 ## Built With
-
 - Major languages : JavaScript (ES6 syntax), HTLM and CSS
-- Frameworks : none
 - Module bundler : `webpack`
 - Library : `Jest` 
 - Technologies used : Github, Git and Linters
 
-## Live Demo (not avialable)
+## video demo
 
-Click [Here]() To open the live demo
+Click [Here](https://drive.google.com/file/d/132BEM_XsMMPSsNGxeiF0VYbIJ5o7PmWF/view?usp=sharing) To open the video demo
 
 ## Getting Started
 
@@ -35,7 +32,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup 🎰
 
-- Click the [me]() and you'll land on the pure repository;
+- Click the [me](https://github.com/Ambrosegithub/JavaScript-Capstone-group-project) and you'll land on the pure repository;
 - click on the green (🟢) button with `Code` Inscription;
 - You can choose to download the project or just clone it if you are familiar with Git and Github;
 - Follow normal step once download in your computer and use it as it's yours.
@@ -54,15 +51,13 @@ To get a local copy up and running follow these simple example steps.
 - `npx eslint .` : for the `JavaScript` codebase and use of best practices
 - > Note that you can add `--fix` keyword to the command for `Css` and/or `JavaScript` to make sure that you avoid all errors comming from your `code editor`
 
-## Author
+## Authors
 
 👤 **Ambrose Isigba**
 
-- GitHub: [@githubhandle](https://github.com/Ambrosegithub
-)
+- GitHub: [@githubhandle](https://github.com/Ambrosegithub)
 - Twitter: [@twitterhandle](https://twitter.com/Glorious851)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ambrisexyz-chief-657000199/)
-
 
 👤 **Custodio Serafim Langa**
 
@@ -73,14 +68,11 @@ To get a local copy up and running follow these simple example steps.
 - LinkedIn: [LinkedIn]((https://www.linkedin.com/in/custodio-serafim-2a318a23a)
 )
 
-
-
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Ambrosegithub/JavaScript-Capstone-group-project/issues).
 
 ## Show your support
 
@@ -90,7 +82,3 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - Hat tip to anyone whose code was used.
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.

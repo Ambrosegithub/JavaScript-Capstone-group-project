@@ -13,13 +13,14 @@ const modal = document.querySelector('.modal');
 const closeButton = document.querySelector('.close-button');
 const image = document.getElementById('img-detail');
 const btnModalComments = document.querySelectorAll('#modal-comments');
-const total = document.querySelectorAll('.likeId');
 const btnLikes = document.querySelectorAll('#btnLikes');
 const formComments = document.querySelectorAll('.formComment');
 const totalAddedComments = document.querySelector('#totalComments');
 const showComments = document.querySelector('#showComments');
 const itemDetails = document.querySelector('#itemDetails');
 let formId = 0;
+
+// START LIKES SECTION
 
 // START LIKES SECTION
 
@@ -36,20 +37,28 @@ export const showLikes = async (showId) => {
   return totalLikes;
 };
 
+const showTotalComments = (event, id) => {
+  showLikes(id).then((totalLikes) => {
+    console.log(event.path[3].childNodes[3]);
+    if (event.path[3].childNodes[3].childNodes[3]) {
+      event.path[3].childNodes[3].childNodes[3].innerHTML = `(${totalLikes})`;
+    } else {
+      event.path[3].childNodes[3].innerHTML = `(${totalLikes})`;
+    }
+  });
+};
+
 btnLikes.forEach((button) => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
     const id = parseInt(event.target.getAttribute('data-showid'), 10);
     addLikes(id);
 
-    total.forEach((el) => {
-      showLikes(id).then((totalLikes) => {
-        el.innerHTML = `<br><br><span class="likes_count">Likes(${totalLikes})`;
-      });
-    });
+    showTotalComments(event, id);
   });
 });
 
+// END LIKES SECTION
 // END LIKES SECTION
 
 // START COMMENT MODAL SECTION
