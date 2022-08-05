@@ -30,7 +30,7 @@ export const Display = async () => {
            <div class="modal">
               <div class="modal-box">
               <div class="detail-top">
-                    <span class="close-button">X</span>
+                    <span class="close-button">&times;</span>
                 </div>
                 <div class="detail-img">
                   <img id="img-detail" alt="show Images">
