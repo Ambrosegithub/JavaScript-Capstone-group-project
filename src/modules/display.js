@@ -11,11 +11,10 @@ export const Display = async () => {
     htmlshow += `
   <div class="show-cards">
     <img src="${show.show.image.medium}" alt="show Images">
+            <h2 class="show-head">${show.show.name}</h2>
         <div class="details">
-            <h2>${show.show.name} 
               <button class="btn" id="btnLikes"><i class="bi bi-heart" data-showId="${
-  show.show.id
-}"></i></button></h2>
+  show.show.id}"></i></button>
               <p class="likeId" >Likes</p>
         </div>
         <div class="button-modal">
