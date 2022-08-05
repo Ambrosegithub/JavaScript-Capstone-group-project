@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Ambrosegithub/JavaScript-Capstone-group-project/issues"
   },
-  "homepage": "https://github.com/Ambrosegithub/JavaScript-Capstone-group-project#readme",
+  "homepage": "https://github.com/Ambrosegithub/JavaScript-Capstone-group-project",
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@babel/plugin-transform-modules-commonjs": "^7.18.6",
@@ -31,6 +31,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "hint": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.3",
