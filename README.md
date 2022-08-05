@@ -1,4 +1,5 @@
-# Project Name: "JavaScript-Capstone-group-project" 
+# Project Name: 
+JavaScript-Capstone-group-project 
 
 > In this project we are making a Cinema TV webapp using an external API's
 >
@@ -12,9 +13,9 @@
 - Library : `Jest` 
 - Technologies used : Github, Git and Linters
 
-## Live Demo (not avialable)
+## video demo
 
-Click [Here]() To open the live demo
+Click [Here](https://drive.google.com/file/d/132BEM_XsMMPSsNGxeiF0VYbIJ5o7PmWF/view?usp=sharing) To open the video demo
 
 ## Getting Started
 
@@ -54,11 +55,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Ambrose Isigba**
 
-- GitHub: [@githubhandle](https://github.com/Ambrosegithub
-)
+- GitHub: [@githubhandle](https://github.com/Ambrosegithub)
 - Twitter: [@twitterhandle](https://twitter.com/Glorious851)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ambrisexyz-chief-657000199/)
-
 
 👤 **Custodio Serafim Langa**
 
@@ -68,9 +67,6 @@ To get a local copy up and running follow these simple example steps.
 )
 - LinkedIn: [LinkedIn]((https://www.linkedin.com/in/custodio-serafim-2a318a23a)
 )
-
-
-
 
 ## 🤝 Contributing
 
@@ -86,7 +82,3 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - Hat tip to anyone whose code was used.
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
